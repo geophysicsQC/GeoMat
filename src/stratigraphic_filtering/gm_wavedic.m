@@ -12,7 +12,7 @@ function [ wavedic] = gm_wavedic(rc,N,rc0 )
 % GNU General Public License for more details.
 % 
 % You should have received a copy of the GNU General Public License
-% along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+% along with GeoMat.  If not, see <http://www.gnu.org/licenses/>.
 % Contact: Chen Qi Email: Geophysics.Chen.Qi@gmail.com
 % =========================================================================
 % the function calculate the wavefield dictionary

@@ -12,7 +12,7 @@ function [ c,r ] = gm_invzdeconv( a,b,n )
 % GNU General Public License for more details.
 % 
 % You should have received a copy of the GNU General Public License
-% along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+% along with GeoMat.  If not, see <http://www.gnu.org/licenses/>.
 % Contact: Chen Qi Email: Geophysics.Chen.Qi@gmail.com
 % =========================================================================
 % inverse z transfrom based on matlab deconv function

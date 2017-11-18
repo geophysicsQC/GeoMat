@@ -12,7 +12,7 @@ function [ b ] = gm_conv( a,sig,nzero )
 % GNU General Public License for more details.
 % 
 % You should have received a copy of the GNU General Public License
-% along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+% along with GeoMat.  If not, see <http://www.gnu.org/licenses/>.
 % Contact: Chen Qi Email: Geophysics.Chen.Qi@gmail.com
 % =========================================================================
 % The function's premitive is the matlab built-in function conv. The difference
