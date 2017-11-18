@@ -34,6 +34,10 @@ function [  dataFiltered, filter,nzero, amp,f  ] = ...
 % nzero (integer) = index in the filter for time zero
 % amp (vector) = designed amplitude spectrum
 % f (vector) = frequency axis for amp
+% 
+% Dependency
+% ==========
+% gm_conv
 
 df = 1/dt/n;
 f = 0:df:1/2/dt;
