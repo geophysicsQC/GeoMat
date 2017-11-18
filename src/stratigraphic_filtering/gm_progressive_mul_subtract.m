@@ -14,7 +14,7 @@ function [ subtraction_panel ] = gm_progressive_mul_subtract( ref_coef, flood_le
 % You should have received a copy of the GNU General Public License
 % along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 % Contact: Chen Qi Email: Geophysics.Chen.Qi@gmail.com
-%
+% =========================================================================
 % Input
 % =====
 % ref_coef - 1D array represents the primary-only reflection coefficients.
@@ -41,7 +41,7 @@ function [ subtraction_panel ] = gm_progressive_mul_subtract( ref_coef, flood_le
 % Dependency
 % ==========
 % gm_reflectivity_multiples
-% gm_wavefield_dictionary
+% gm_wavedic
 
 % convert ref_coef to column vector
 ref_coef = ref_coef(:);
@@ -53,7 +53,7 @@ pm = gm_reflectivity_multiples(ref_coef, length(ref_coef), 0);
 subtraction_panel = repmat(ref_coef, 1, length(ref_coef));
 
 % calculate wavefield dictionary
-wd = gm_wavefield_dictionary(ref_coef, length(ref_coef), 0);
+wd = gm_wavedic(ref_coef, length(ref_coef), 0);
 
 % calculate frequency domain wavefield dictionary
 nfft = 2^(nextpow2(length(ref_coef)));
@@ -78,7 +78,8 @@ for n = 1:size(subtraction_panel,2) - 1
         remain(n:end) - ref_coef(n) * wd(1:end-n+1, n);
     % get trace to be deconvolved
     decon_trace = remain(n+1:end);
-    subtraction_panel(n+1:end,n) = real(ifft(fft(decon_trace, nfft)./WD(:,n)));
+    temp = real(ifft(fft(decon_trace, nfft)./WD(:,n)));
+    subtraction_panel(n+1:end,n) = temp(1:length(decon_trace));
 end
 
 
