@@ -9,5 +9,5 @@ File Structure
 ===============
 src
   - plotting: all figure related functions are in this folder, for example, wiggle-variable-area plot function.
-  - signal_processing_utility: all common signal processing functions are in this folder, for example, bandpass filer and convolution.
+  - signal_processing_utility: all common signal processing functions are in this folder, for example, bandpass filter and convolution.
   - stratigraphic_filtering: source code for Chen and Hilterman paper: Well ties for severe stratigraphic filtering. Please see examples.m for more details.
