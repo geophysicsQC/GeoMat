@@ -78,7 +78,7 @@ A = (E + F)/2;
 B = E/2 - 2*H.^2.*D;
 C = E/2;
 for n = 1:length(theta)
-    rc(:,n) = A + B.*sin(theta).^2 + C.*sin(theta).^2.*tan(theta).^2;
+    rc(:,n) = A + B.*sin(theta(n)).^2 + C.*sin(theta(n)).^2.*tan(theta(n)).^2;
 end
 
 end
