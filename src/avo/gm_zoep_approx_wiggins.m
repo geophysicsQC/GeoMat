@@ -73,10 +73,10 @@ G = delta_beta./mean_beta;
 H = mean_beta./mean_alpha;
 D = 2*G + F;
 
+% Generate output
 A = (E + F)/2;
 B = E/2 - 2*H.^2.*D;
 C = E/2;
-
 for n = 1:length(theta)
     rc(:,n) = A + B.*sin(theta).^2 + C.*sin(theta).^2.*tan(theta).^2;
 end
